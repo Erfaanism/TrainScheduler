@@ -37,10 +37,10 @@ $(document).ready(function(){
 				strName = snap.child("Train" + i + "/Name").val();
 				strDestination = snap.child("Train" + i + "/Destination").val();
 				strFirst = snap.child("Train" + i + "/First").val();
-				strFirstConverted = moment(strFirst, "hh:mm").subtract(1, "years");
+				strFirstConverted = moment(strFirst, "HH:mm").subtract(1, "years");
 				intFrequency = parseInt(snap.child("Train" + i + "/Frequency").val());
 				intAway = parseInt(intFrequency - ((moment().diff(moment(strFirstConverted), "minutes")) % intFrequency));
-				strArrival = moment(moment().add(intAway, "minutes")).format("hh:mm");		
+				strArrival = moment(moment().add(intAway, "minutes")).format("HH:mm");		
 				var newRow = $("<tr>");
 				newRow.html("<td>" + strName + "</td><td>" + strDestination + "</td><td>Every " + intFrequency + " Minutes</td><td>" + strArrival + "</td><td>" + intAway + " Minutes</td>");
 				$("#tableBody").append(newRow);
