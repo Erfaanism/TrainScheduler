@@ -1,0 +1,30 @@
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../images/station.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Palatino",sans-serif;
+	font-size: 18px;
+}
+
+#headerBox {
+	font-size: 30px;
+}
+
+#tableBody{
+	display: none;
+}
+
+#tableError{
+	display: none;
+}
+
+.customContainer {
+	background-color: rgba(240, 240, 240, 0.8);
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+.titleText {
+	font-size: 24px;
+}
